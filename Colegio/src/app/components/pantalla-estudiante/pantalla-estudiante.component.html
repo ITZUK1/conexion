@@ -1,1 +1,57 @@
-<p>pantalla-estudiante works!</p>
+<div class="profile-container">
+    <div class="file-upload-container">
+      <button (click)="triggerFileInput()">Cambiar Foto</button>
+      <input type="file" (change)="onImageChange($event)" accept="image/*" #fileInput hidden>
+    </div>
+    <div class="profile-photo">
+      <img *ngIf="avatarURL" [src]="avatarURL" alt="Avatar">
+    </div>
+  
+    <div class="profile-info">
+      <table>
+        <tr>
+          <td><strong>Nombre:</strong></td>
+          <td>{{ studentName }}</td>
+        </tr>
+        <tr>
+          <td><strong>ID:</strong></td>
+          <td>{{ studentId }}</td>
+        </tr>
+        <tr>
+          <td><strong>Fecha:</strong></td>
+          <td>{{ date }}</td>
+        </tr>
+        <tr>
+          <td><strong>Teléfono:</strong></td>
+          <td>{{ phone }}</td>
+        </tr>
+        <tr>
+          <td><strong>Estado:</strong></td>
+          <td [ngClass]="{'online': isOnline, 'offline': !isOnline}">{{ isOnline ? 'En línea' : 'Fuera de línea' }}</td>
+        </tr>
+      </table>
+    </div>
+  
+    <button (click)="checkOnlineStatus()">Actualizar Estado</button>
+    <br>
+    <button (click)="showSubjectsPopup()">Ver Materias</button>
+  
+    <div *ngIf="showPopup" class="popup">
+      <h2>Materias</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Materia</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let subject of subjects">
+            <td>{{ subject.name }}</td>
+            <td>{{ subject.status }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <button (click)="closePopup()">Cerrar</button>
+    </div>
+  </div>

@@ -1,0 +1,121 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif; /* Fuente más moderna */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Fondo suave */
+  }
+  
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px; /* Ancho ligeramente mayor */
+    margin: 50px auto;
+    border-radius: 10px;
+    overflow: hidden; /* Para que las sombras se vean bien */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    background-color: #fff; /* Fondo blanco */
+  }
+  
+  .profile-photo {
+    width: 180px;
+    height: 180px;
+    margin: 20px 0;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .profile-info {
+    padding: 20px;
+  }
+  
+  .profile-info table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0; /* Evita espacios entre celdas */
+  }
+  
+  .profile-info th, .profile-info td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #eee; /* Línea divisora sutil */
+  }
+  
+  .profile-info th {
+    font-weight: bold;
+    text-align: right; /* Alineación a la derecha para los labels */
+  }
+  
+  .online {
+    color: #28a745; /* Verde más vibrante */
+  }
+  
+  .offline {
+    color: #dc3545; /* Rojo más vibrante */
+  }
+  
+  .file-upload-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: #007bff; /* Azul Bootstrap */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0069d9; /* Azul más oscuro al hover */
+  }
+  
+  
+  /* Estilos para la ventana emergente */
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    max-width: 500px; /* Ancho máximo para la ventana emergente */
+    width: 90%; /* Ocupa el 90% del ancho en pantallas pequeñas */
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+  }
+  
+  .popup table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+  
+  .popup th, .popup td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+  }
+  
+  .popup th {
+    background-color: #f8f9fa; /* Gris claro para el encabezado */
+    font-weight: bold;
+  }
+  

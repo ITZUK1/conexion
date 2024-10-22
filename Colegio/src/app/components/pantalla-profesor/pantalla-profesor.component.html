@@ -1,1 +1,54 @@
-<p>pantalla-profesor works!</p>
+<body>
+    <div class="container">
+      <header>
+        <h1>Bienvenido profesor</h1>
+        <p>Identificado: XXXXXX</p>
+      </header>
+      <div class="content">
+        <form id="materiaForm">  <!-- Encapsulate form elements -->
+          <table>
+            <thead>
+              <tr>
+                <th>Materias</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input type="text" name="materia" id="nuevaMateria" placeholder="Nombre de la materia" required>
+                  <span class="error-message" id="error-materia"></span>
+                </td>
+                <td><span id="estadoNuevaMateria"></span></td>
+                <td>
+                    <button type="button" onclick="agregarMateria()">Agregar</button>
+                    <button type="button" onclick="agregarMateria()">eliminar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+  
+          <!-- Separate section for student and schedule info -->
+          <h2>Información del Estudiante y Horario</h2>
+          <table>
+            <tbody>
+              <tr>
+                <td>Estudiante Agendado</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Horario</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Semestre</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </form>  <!-- Close the form -->
+      </div>
+    </div>
+  </body>
+  
